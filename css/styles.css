@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #E9ECF4;
+    Font-size: 13px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "daniel daniel jona kira" "jeane pat pat kira";
+    width: 90%;
+    margin: auto;
+    margin-bottom: 0px;
+    grid-gap: 30px;
+}
+
+.daniel {
+    position: relative;
+    grid-area: daniel;
+    background: hsl(263, 55%, 52%);
+}
+
+.jonathan {
+    grid-area: jona;
+    background: hsl(217, 19%, 35%);
+}
+
+.jeanette {
+    grid-area: jeane;
+    background: hsl(0, 0%, 100%);
+}
+
+.kira {
+    grid-area: kira;
+    background: hsl(0, 0%, 100%);
+}
+
+.patrick {
+    grid-area: pat;
+    background: hsl(219, 29%, 14%);
+}
+
+.perfil-img {
+    border-radius: 50%;
+    background: hsl(256, 60%, 65%);
+    padding: 2px;
+    margin: 25px 0px 40px 25px;
+    width: 45px;
+    height: 45px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: -85px 0px 30px 85px;
+    color: hsl(0, 0%, 81%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.name>span {
+    opacity: 50%;
+}
+
+div .bg-quotation {
+    position: absolute;
+    height: 121px;
+    width: 110px;
+    margin-left: 65%;
+    z-index: 0;
+}
+
+.text1 {
+    position: relative;
+    padding: 0 25px 25px 25px;
+    font-size: 21px;
+    color: hsl(0, 0%, 81%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.text2 {
+    padding: 0 25px 25px 25px;
+    font-size: 14px;
+    color: hsl(0, 0%, 81%);
+    opacity: 70%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.jeanette .text2,
+.kira .text2,
+.jeanette .name,
+.kira .name,
+.jeanette .text1,
+.kira .text1 {
+    color: hsl(217, 19%, 35%);
+}
+
+.jeanette .perfil-img,
+.kira .perfil-img {
+    background: hsl(0, 0%, 100%);
+}
+
+.jonathan .perfil-img {
+    background: hsl(217, 19%, 35%);
+}
+
+@media screen and (max-width: 830px) {
+    div .bg-quotation {
+        position: absolute;
+        height: 80px;
+        width: 70px;
+        margin-left: 50%;
+        z-index: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: "daniel" "jona" "jeane" "pat" "kira";
+        max-height: 667px;
+    }
+    div .bg-quotation {
+        position: absolute;
+        height: 121px;
+        width: 110px;
+        margin-left: 55%;
+        z-index: 0;
+    }
+}
